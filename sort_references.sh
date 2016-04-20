@@ -11,6 +11,18 @@
 
 BIBFILE=bibliography.bib
 
+# Ensure that no running instance of pybliographic is running:
+echo "Looking for a running instance of pybliographic"
+if PID_BIBTOOL=$(pgrep -f pybliographic); then
+  echo "Found running instance of pybligraphic (pid = $PID_BIBTOOL)"
+  echo "Please, close application before continuing."
+  while PID_BIBTOOL=$(pgrep -f pybliographic); do
+    echo "Process still running..."
+    read -n1 -p "Close application with pid = $PID_BIBTOOL and press any key to continue: " key
+    echo ""
+  done
+fi
+
 echo "Looking for an installed version of bibtool"
 which bibtool || {
   echo "exiting now!"
