@@ -71,8 +71,7 @@ git push origin master
 # Query user whether to re-launch reference manager:
 # (BIBTOOL will be launched as an independent process)
 echo "(Re-)launch reference manager ($BIBTOOL)? [Y/N]"
-get_yes_no
-if $?; then
+if get_yes_no; then
   $BIBTOOL &> $HOME/.xsession-errors &!
 fi
 
