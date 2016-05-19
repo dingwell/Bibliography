@@ -69,9 +69,10 @@ git commit -a
 git push origin master
 
 # Query user whether to re-launch reference manager:
-# (BIBTOOL will be launched as an independent process)
+#   BIBTOOL will be launched as an independent process
+#   all messages (stdout+stderr) will be re-directed to ~/.xsession-errors
 echo "(Re-)launch reference manager ($BIBTOOL)? [Y/N]"
 if get_yes_no; then
-  $BIBTOOL &> $HOME/.xsession-errors &!
+  $BIBTOOL "$BIBFILE" >> $HOME/.xsession-errors 2>&1 &!
 fi
 
