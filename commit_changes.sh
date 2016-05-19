@@ -2,6 +2,7 @@
 # Quick tool for making commits
 
 BIBFILE=bibliography.bib  # This file will be sorted using bibtool
+BIBTOOL=pybliographic     # Bibliography manager
 
 get_yes_no(){
   # read input until either y,Y,n or N is entered
@@ -48,7 +49,7 @@ sort_bibliography(){
 
 ## MAIN ##
 # Ensure that no instance of the bibtool is running:
-ensure_process_not_running pybliographic
+ensure_process_not_running "$BIBTOOL" 
 
 # Sort references:
 sort_bibliography $BIBFILE
@@ -66,3 +67,9 @@ git commit -a
 
 # Push to master:
 git push origin master
+
+# Query user whether to re-launch reference manager:
+# (BIBTOOL will be launched as an independent process)
+echo "(Re-)launch reference manager ($BIBTOOL)? [Y/N]"
+get_yes_no && $BIBTOOL &> $HOME/.xsession-errors &!
+
