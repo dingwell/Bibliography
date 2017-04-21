@@ -43,6 +43,9 @@ sort_bibliography(){
   bibtool -s $BIBFILE > tmp.bib
   if [[ $? == 0 ]]; then # If sorting worked, replace original file with sorted
       mv -v tmp.bib $BIBFILE
+  else
+    echo "Failed to sort '$BIBFILE', exiting" 1>&2
+    exit 1
   fi
 }
 
@@ -52,7 +55,7 @@ sort_bibliography(){
 ensure_process_not_running "$BIBTOOL" 
 
 # Sort references:
-sort_bibliography $BIBFILE
+sort_bibliography $BIBFILE || exit 1
 
 # Output changes:
 echo "Changes since last release:"
