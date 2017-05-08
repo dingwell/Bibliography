@@ -2233,6 +2233,21 @@
   year		= 2007
 }
 
+@Article{	  jonson2015,
+  author	= {Jonson, J. E. and Jalkanen, J. P. and Johansson, L. and
+		  Gauss, M. and Denier van der Gon, H. A. C.},
+  title		= {Model calculations of the effects of present and future
+		  emissions of air pollutants from shipping in the {B}altic
+		  {S}ea and the {N}orth {S}ea},
+  journal	= {Atmospheric Chemistry and Physics},
+  volume	= {15},
+  number	= {2},
+  pages		= {783--798},
+  doi		= {10.5194/acp-15-783-2015},
+  url		= {http://www.atmos-chem-phys.net/15/783/2015/},
+  year		= 2015
+}
+
 @Article{	  jung2006,
   author	= "Eunjoo Jung and Yaping Shao",
   title		= "An intercomparison of four wet deposition schemes used in
