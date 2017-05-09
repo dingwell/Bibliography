@@ -574,6 +574,22 @@
   year		= 2012
 }
 
+@Article{	  burkart2017,
+  author	= {Burkart, J. and Willis, M. D. and Bozem, H. and Thomas, J.
+		  L. and Law, K. and Hoor, P. and Aliabadi, A. A. and
+		  K\"ollner, F. and Schneider, J. and Herber, A. and Abbatt,
+		  J. P. D. and Leaitch, W. R.},
+  title		= {Summertime observations of elevated levels of ultrafine
+		  particles in the high {A}rctic marine boundary layer},
+  journal	= {Atmospheric Chemistry and Physics},
+  volume	= {17},
+  number	= {8},
+  pages		= {5515--5535},
+  doi		= {10.5194/acp-17-5515-2017},
+  url		= {http://www.atmos-chem-phys.net/17/5515/2017/},
+  year		= 2017
+}
+
 @Article{	  bursik1992,
   author	= {Bursik, M I and Sparks, R S J and Gilbert, J S and Carey,
 		  S N},
